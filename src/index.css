@@ -53,6 +53,11 @@ body {
   justify-content: center;
 }
 
+.attribution {
+  display: flex;
+  justify-content: center;
+}
+
 button {
   cursor: pointer;
 }
