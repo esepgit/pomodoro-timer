@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.container {
+  border: 3px solid black;
+  padding: 20px;
+  box-shadow: 10px 10px 10px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#break-decrement, #break-increment, #session-decrement, #session-increment {
+  border: none;
+  background-color: transparent;
+}
+
+#break-decrement svg, #break-increment svg, #session-decrement svg, #session-increment svg, #reset svg {
+  width: 20px;
+}
+
+#start_stop svg {
+  width: 13px;
+}
+
+.time-container {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px;
+}
+
+#time-left {
+  font-size: 60px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+}
