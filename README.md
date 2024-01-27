@@ -6,7 +6,7 @@ A timer thats allows configure work sessions and breaks
 
 ## Preview
 
-<img src="./src/assets/preview.gif" width="500" />
+<img src="./public/preview.png" width="500" />
 
 ## Technologies
 

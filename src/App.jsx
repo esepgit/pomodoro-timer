@@ -9,6 +9,8 @@ function App() {
   const [intervalId, setIntervalId] = useState('');
   const [isSessionTime, setIsSessionTime] = useState(true);
 
+  const audio = new Audio("./alarm.mp3");
+
   const handleClickDecrementBreak = () => {
     if (breakValue > 1) {
       setBreakValue(breakValue - 1);
@@ -48,7 +50,6 @@ function App() {
   };
 
   const handleClickPlay = () => {
-    console.log("session", isPlaying);
     if (!isPlaying) {
       const startingMinutes = minutes;
       let time = startingMinutes * 60 + seconds; //en caso de iniciar dsp de pausa, le resto los segundos que han pasado
@@ -58,6 +59,7 @@ function App() {
         time--;
 
         if (time < 0) {
+          audio.play();
           clearInterval(interval);
           setIsSessionTime(false);
           setMinutes(breakValue);
@@ -85,6 +87,7 @@ function App() {
         time--;
 
         if (time < 0) {
+          audio.play();
           clearInterval(interval);
           setIsSessionTime(true);
           setMinutes(sessionValue);
@@ -102,6 +105,8 @@ function App() {
   };
 
   const handleClickReset = () => {
+    audio.pause();
+    audio.currentTime = 0;
     setBreakValue(5);
     setSessionValue(25);
     setMinutes(25);
